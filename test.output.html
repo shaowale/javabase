@@ -1,0 +1,170 @@
+    <div id="basicInfo">
+    <input type="hidden" id="pageType" value="add">
+    <input type="hidden" id="templateType_contract" name="templateType_contract" value="hr_common">
+    <div align="center" class="main">
+                    <span class="title test_center">
+                外包服务合同
+            </span><br>
+            </div>
+    <div class="main" align="right">
+                    <p style="line-height:26px;padding-left:10px;">合同编号： </p>
+            </div>
+
+    
+    <div id="hiddenVm" style="display:none">
+        <table ignore="true" style="margin-left:74px;border:0" border="0" class="tabList">
+            <tbody><tr>
+                <td style="border:0;color:black" align="right"></td>
+                <td style="border:0;">
+                    <span class="showPopupBtnBox2" jq-name="qydwpopBtn"><!--unitId
+                                                                                    -->
+                    <input type="hidden" id="unitId" name="unitIds">
+                    <input type="hidden" id="buCode" name="buCode">
+                    <input type="hidden" id="ouCode" name="ouCode">
+                    <input type="hidden" id="unitPrimaryId" name="unitPrimaryId">
+                    <strong>            <input id="partyA" name="partyAName" class="showPopupCinInput2  fl hand easyui-validatebox Cinput validatebox-text" validtype="length[0,150]" style="width:200px;display:none;" readonly="readonly" required="true">
+    </strong>
+                    <label class="showPopupBtn2  fl"></label></span>
+                </td>
+                <td style="border:0;color:black">
+                    <strong>(以下简称“</strong>
+                        <span class="disline posrel">
+                                    <input id="abbr" name="shortName" placeholder=" 非必填" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,50]" style="width:100px;display:none;" onblur="setFirstInfo(this.value)" maxlength="50">
+                            </span>
+                    <strong>”)</strong>
+
+                </td>
+                <td style="border:0;">
+                    <a href="javascript:void(0)" name="delShortName" onclick="delPart(this)">删除</a>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    
+    <div class="main" id="fristPartHtml">
+        <div style="line-height:26px;padding-left:30px">
+            <input type="hidden" id="partyAId" value="partyA">
+            <input type="hidden" id="h_unitId" value="unitId"> 
+            <input type="hidden" id="partyAShortNameId" value="abbr"> 
+            <input type="hidden" id="h_ouCodeId" value="ouCode"> 
+            <input type="hidden" id="h_buCodeId" value="buCode"> 
+            <input type="hidden" id="h_unitPrimaryId" value="unitPrimaryId"> 
+            <input type="hidden" id="contractStatus" value="not_submit"> 
+                                        <p style="line-height:26px;padding-left:30px">
+                    </p><table ignore="true" border="0" class="tabList" style="border:0">
+                        <tbody><tr>
+                            <td style="border:0;color:black" align="right"><strong>甲方：</strong></td>
+                            <td style="border:0;color:black">
+                                <input type="hidden" id="partyAIndex" value="1">
+                                <input type="hidden" id="unitId_1" value="9" name="unitIds">
+                                <input type="hidden" id="buCode_1" value="AD" name="buCode">
+                                <input type="hidden" id="ouCode_1" value="A50" name="ouCode">
+                                <strong>            <input id="partyA_1" name="partyAName" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,150]" style="width:223px;" value="阿里巴巴（中国）有限公司" onblur="setFirstInfo(this.value)" readonly="readonly" bu="AD" ou="A50" key="9" required="true">
+    </strong>
+                            </td>
+                                                            <td style="border:0;color:black">
+                                    <strong>(以下简称“</strong>
+                                        <span class="disline posrel">
+                                                    <input id="abbr_1" name="shortName" placeholder=" 非必填" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,50]" style="width:100px;" onblur="setFirstInfo(this.value)" maxlength="50">
+                                            </span>
+                                    <strong>”)</strong>
+                                </td>
+                                                    </tr>
+                    </tbody></table>
+                <p></p>
+                        <input type="hidden" id="partyAIndex" value="0">
+        </div>
+    </div>
+            <p style="line-height:26px;padding-left:104px">
+                        <input type="button" class="subBtnMe3 ml10 hand middle" style="margin-top:5px" value="新增甲方" onclick="insertFirstParty()">
+            </p>
+        
+
+
+    
+    <div class="main"> 
+        <table ignore="true" border="0" class="tabList" style="border:0">
+
+                        <tbody><tr> 
+                <td style="border:0;color:black" align="right"><strong>联系地址：</strong></td>
+                <td style="border:0;color:black;"><strong>          <input id="intAddress" name="intAddress" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,75]" style="width:200px;" value="" required="true">
+    </strong></td>
+            </tr>
+            <tr>
+                <td style="border:0;color:black" align="right"><strong>联系人：</strong></td>
+                <td style="border:0;color:black"><strong>           <input id="intContacter" name="intContacter" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,10]" style="width:200px;" value="" required="true">
+    </strong></td>
+            </tr>
+            <tr>
+                <td style="border:0;color:black" align="right"><strong>电话：</strong></td>
+                <td style="border:0;color:black"><strong>           <input id="intPhone" name="intPhone" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,50]" style="width:200px;" value="" maxlength="50" required="true">
+    </strong></td>
+            </tr>
+            <tr>  
+                                    <td style="border:0;color:black" align="right"><strong>邮件：</strong></td>
+                    <td style="border:0;color:black"><strong>           <input id="intEmail" name="intEmail" class="easyui-validatebox Cinput validatebox-text" validtype="email&amp;length[0,50]" style="width:150px;" value="" maxlength="50" required="true">
+    </strong></td>
+                            </tr>
+        </tbody></table>
+    </div>
+    
+    <div class="main">
+        <table ignore="true" border="0" class="tabList" style="border:0">
+            <tbody><tr>
+                <td style="border:0;color:black" align="right"><strong>乙方：</strong></td>
+                                    <td style="border:0;color:black" colspan="3">                                   
+                        <input type="hidden" id="partyBId" value="contractExternalOrgId">
+                        <input type="hidden" id="partyBName" value="contractExternalOrgName">
+                        <input type="hidden" id="contractExternalOrgId" name="contractExternalOrgId" value="0">
+                        <span class="borBoxCCC I-B SearLtdBox bgfff posrel" style="height:24px">
+                                    <input id="contractExternalOrgName" name="contractExternalOrgName" class="easyui-validatebox fl Cinput validatebox-text" validtype="length[0,50]&amp;validatePartyInfoIsExist[this]" style="width:282px;height:24px;line-height:24px;border:0;" value="" required="true" type="text" maxlength="50" key="0">
+                            <input type="button" class="subSearch hand fl" value=" ">
+                        <div class="dropDownConBox undis" style="left: -1px; width: 100%; display: none;"></div></span>                                                     
+                    </td>
+                    <td style="border:0;color:black" align="left">
+                        <div id="errorMessage" class="kuma-form-explain undis">
+                            <span class="kuma-tiptext kuma-tiptext-error">
+                                <img align="center" title="错误" src="https://g-assets.daily.taobao.net/platform/finance_ceres/1.0.95/images/errorIco2.gif" style="width:5%;">
+                                <font align="center">未发现，请确认输入及供应商是否入库。</font>
+                            </span>                     
+                        </div>
+                    </td>
+                            </tr>
+                        <tr>
+                <td style="border:0;color:black" align="right"><strong>联系地址：</strong></td>
+                <td style="border:0;color:black"><strong>           <input id="extAddress" name="extAddress" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,75]" style="width:200px;" value="" required="true">
+    </strong></td>
+            </tr>
+            <tr>
+                <td style="border:0;color:black" align="right"><strong>联系人：</strong></td>
+                <td style="border:0;color:black"><strong>           <input id="extContacter" name="extContacter" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,10]" style="width:200px;" value="" required="true">
+    </strong></td>
+            </tr>
+            <tr>
+                <td style="border:0;color:black" align="right"><strong>电话：</strong></td>
+                <td style="border:0;color:black"><strong>           <input id="extPhone" name="extPhone" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,50]" style="width:200px;" value="" maxlength="50" required="true">
+    </strong></td>
+            </tr>
+            <tr>
+                                    <td style="border:0;color:black" align="right"><strong>邮件：</strong></td>
+                    <td style="border:0;color:black"><strong>           <input id="extEmail" name="extEmail" class="easyui-validatebox Cinput validatebox-text" validtype="email&amp;length[0,50]" style="width:150px;" value="" maxlength="50" required="true">
+    </strong></td>
+                            </tr>
+        </tbody></table>
+    </div>
+
+    
+        
+</div>
+</div>alidatebox-text" validtype="length[0,10]" style="width:200px;" value="" required="true">
+    </strong></td>
+            </tr>
+            <tr>
+                <td style="border:0;color:black" align="right"><strong>电话：</strong></td>
+                <td style="border:0;color:black"><strong>           <input id="extPhone" name="extPhone" class="easyui-validatebox Cinput validatebox-text" validtype="length[0,50]" style="width:200px;" value="" maxlength="50" required="true">
+    </strong></td>
+            </tr>
+            <tr>
+                                    <td style="border:0;color:black" align="right"><strong>邮件：</strong></td>
+                    

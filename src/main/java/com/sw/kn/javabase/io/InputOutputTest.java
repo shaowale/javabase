@@ -1,4 +1,4 @@
-package com.shaowei.kn.javabase.io;
+package com.sw.kn.javabase.io;
 
 import java.io.BufferedInputStream;
 import java.io.File;

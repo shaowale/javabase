@@ -1,4 +1,4 @@
-package com.shaowei.kn.javabase.io;
+package com.sw.kn.javabase.io;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
